@@ -1,0 +1,189 @@
+@import '../../common-var.scss';
+
+.timeline{
+    margin-top: $unit * 10;
+    padding: $unit * 10 0;
+    background-color: $black-light;
+
+    .timeline-tabs{
+        margin-bottom: $margin-32 * 1.4;
+        text-align: center;
+        button{
+            border: 0;
+            background-color: transparent;
+            color: $light-gray;
+            font-family: Montserrat-bold, sans-serif;
+            font-size: $unit * 2.2;
+            padding: 24px 100px;
+            outline: none;
+            cursor: pointer;
+            border-bottom: 1px solid;
+            transition: 0.5s;
+
+            @include tabletPortrait() {
+                font-size: $unit * 2;
+                text-align: center;
+                padding: 24px 32px;
+            }
+        }
+    }
+
+    .browser-container{
+        padding: 5rem 0 3rem;
+        background-color: #262829;
+        border-radius: $unit;
+        position: relative;
+        overflow: hidden;
+
+        .left-block, .right-block{
+            position: absolute;
+            top: $unit;
+        }
+
+        .left-block{
+            left: 1rem;
+            span{
+                font-size: 0.7rem;
+                color: $light-gray;
+
+                &.active{
+                    color: $white-fff;
+                }
+            }
+            .chevron-right-icon{
+                margin: 0 $unit;
+            }
+        } 
+        
+        .right-block{
+            right: 1rem;
+            .MuiSvgIcon-root{
+                margin-left: $unit;
+            }
+        }
+
+    }
+    .timeline-block{
+        max-width: 500px;
+        display: block;
+        margin:  auto;
+        margin-bottom: 0px;
+        transition: 0.5s;
+        transition-timing-function: ease-in;
+        transition: 0.5s;
+        @include tabletPortrait() {
+            padding: 0 24px;
+        }
+
+        > *{
+            transition: 0.5s;
+        }
+
+        .section-title{
+            text-align: left;
+        }
+        h3{
+            font-size: $unit * 3;
+            margin-bottom: $margin-16;
+        }
+        ul{
+            margin-bottom: $margin-32;
+            transition-timing-function: ease-in;
+            transition: 0.5s;
+            li{
+                transition: 0.5s;
+            }
+        }
+        ul li, p{
+            font-size: 0.8rem;
+            line-height: 1.25rem;
+            padding-bottom: $unit / 2;
+        }
+        .planning{
+            li{
+                background-color: transparent;
+                padding: 0;
+                line-height: $unit * 2.5;
+                box-sizing: border-box;
+                margin-bottom: 0;
+                min-width: 150px;
+                margin-left: 0;
+                transition-timing-function: ease-in;
+
+                &:nth-child(1){
+                    width: 20%;
+                }
+                &:nth-child(2){
+                    width: 20%;
+                }
+                &:nth-child(3){
+                    width: 40%;
+                }
+                &:nth-child(4){
+                    width: 40%;
+                }
+            }
+        }
+        .things-to-research{
+            .MuiSvgIcon-root{
+                margin-right: $unit;
+            }
+        }
+        .note-image{
+            position: absolute;
+            width: 300px;
+            right: -300px;
+            bottom: 20px;
+            transition: 0.5s;
+            transition-timing-function: ease-in;
+            @include tabletPortrait() {
+                position: initial;
+                right: auto;
+                bottom: auto;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        &.thinking-timeline{
+            max-width: 80%;
+            margin-bottom: 100px;
+            transition-timing-function: ease-out;
+            transition-delay: 5s;
+            transition: 1.5s;
+            .planning{
+                li{
+                    padding: $unit / 1.5 0 $unit * 1.5;
+                    padding-left: 4px;
+                    margin-bottom: 4px;
+                    transition-timing-function: ease-out;
+
+                    &:nth-child(2){
+                        margin-left: 20%;
+                    }
+                    &:nth-child(3){
+                        margin-left: 30%;
+                    }
+                    &:nth-child(4){
+                        margin-left: 60%;
+                    }
+                }
+            }
+            .note-image{
+                right: 20px;
+                transition-timing-function: ease-out;
+                transition-delay: 0s;
+                transition: 0.5s;
+                @include tabletPortrait() {
+                    position: initial;
+                    right: auto;
+                    bottom: auto;
+                }
+            }
+            @include tabletPortrait() {
+                margin-bottom: 0;
+                max-width: 100%;
+            }
+        }
+    }
+}

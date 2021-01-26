@@ -1,0 +1,18 @@
+@import '../../common-var.scss';
+
+.banner{
+    .container{
+        margin-top: 80px;
+        min-height: calc(100vh - 80px);
+    }
+
+    h1{
+        padding: $padding-32 * 3 0px;
+        font-size: $unit * 5.55;
+        text-align: center;
+
+        @include tabletPortrait() {
+            font-size: $unit * 4;
+        }
+    }
+}

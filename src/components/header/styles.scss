@@ -1,0 +1,72 @@
+@import '../../common-var.scss';
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    z-index: 99;
+    
+    .logo{
+        h2{
+            font-size: $unit * 8;
+            font-family: Cambria;
+        }
+    }
+    
+    .nav-container{
+        text-align: right;
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            li{
+                margin-left: $margin-24;
+                a{
+                    font-family: 'Montserrat-Bold';
+                    font-size: $unit * 2;
+                }
+            }
+        }
+    }
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 25px;
+}
+.bm-burger-bars {
+  background: $white-fff;
+}
+.bm-morph-shape {
+  fill: #000000;
+}
+.bm-menu {
+  background: #000000;
+}
+.bm-menu a {
+  color: #ffffff;
+}
+.bm-menu a:hover,
+.bm-menu a:focus {
+  color: #b8b7ad;
+}
+.bm-item-list a {
+  padding: 0.8em;
+}
+.bm-item-list a span {
+  margin-left: 10px;
+  font-weight: 700;
+}
+.bm-item:focus {
+  outline: none;
+}
+.bm-cross-button{
+  display: none;
+  .bm-cross{
+    background-color: $white-fff;
+  }
+}

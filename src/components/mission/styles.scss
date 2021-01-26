@@ -1,0 +1,84 @@
+@import '../../common-var.scss';
+
+.our-mission{
+    margin: $unit * 10 0;
+    padding: $unit * 10 0 0;
+    @include tabletPortrait() {
+        padding-top: 0;
+    }
+
+    .section-title{
+        text-align: left;
+    }
+    p{
+        font-size: $unit * 2.35;
+        line-height: $unit * 3.2;
+
+        span{
+            font-size: $unit * 2.5;
+            font-weight: 800;
+        }
+
+        @include tabletPortrait() {
+            font-size: $unit * 2;
+            span{
+                font-size: $unit * 2.25;
+            }
+        }
+    }
+    .browser-container{
+        padding: 5rem 0 3rem;
+        background-color: #262829;
+        border-radius: $unit;
+        position: relative;
+        display: flex;
+        width: 700px;
+        margin: auto;
+        margin-top: $unit * 10;
+
+        @include tabletPortrait() {
+            width: 100%;
+            padding: 0;
+            background-color: transparent;
+            svg{
+                display: block;
+                margin: auto;
+            }
+        }
+    
+        .left-block, .right-block{
+            position: absolute;
+            top: $unit;
+        }
+
+        .left-block{
+            left: 1rem;
+        }
+        
+        .mock-text{
+            margin-right: 60px;
+            span{
+                display: block;
+                padding: 8px 0;
+                padding-left: 1rem;
+                width: 150px;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 130px;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: #5a5757;
+                }
+                &:nth-child(1)::after{ width: 130px; }
+                &:nth-child(2):after{ width: 80px; }
+                &:nth-child(3):after{ width: 110px; }
+                &:nth-child(4):after{ width: 70px; }
+                &:nth-child(5):after{ width: 120px; }
+                &:nth-child(6):after{ width: 90px; }
+                &:nth-child(7):after{ width: 100px; }
+                &:nth-child(8):after{ width: 120px; }
+           }
+        }
+    }
+}
