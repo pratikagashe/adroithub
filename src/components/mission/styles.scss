@@ -80,5 +80,29 @@
                 &:nth-child(8):after{ width: 120px; }
            }
         }
+        .theme-changer{
+            position: relative;
+            .flex-box{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -32px;
+                margin-left: -72px;
+            }
+        }
+    }
+}
+
+// light theme
+.light-theme{
+    .browser-container{
+        background-color: $white-fff;
+        box-shadow: 0 28px 24px rgba(0,0,0,.09);
+
+        .mock-text{
+            span::after{
+                background-color: $light-gray;
+            }
+        }
     }
 }

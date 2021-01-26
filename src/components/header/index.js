@@ -10,7 +10,7 @@ const Header = () => {
     const [color, setColor] = useContext(Context);
 
     return (
-        <header id="header-container">
+        <header id="header-container" className={color.theme === 'light' ? 'light-theme' : ''}>
             <div className="container">
                 <Grid container alignContent='space-between' alignItems='center'>
                     <Grid item lg={4} md={4} sm={4}>

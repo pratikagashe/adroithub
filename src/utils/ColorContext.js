@@ -1,7 +1,8 @@
 import React, {createContext, useState} from 'react';
 
 const color = {
-    code: '#36F2B9'
+    code: '#36F2B9',
+    theme: 'dark'
 };
 
 export const Context = createContext([color, () => {}]);

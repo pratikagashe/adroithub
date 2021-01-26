@@ -7,6 +7,7 @@ import OurMission from '../mission'
 import Footer from '../footer'
 import { Link } from 'react-router-dom'
 import { Context } from '../../utils/ColorContext';
+import ScrollAnimation from 'react-animate-on-scroll'
 
 
 const Home = () => {
@@ -16,19 +17,21 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <>
+        <div className={color.theme === 'light' ? 'light-theme' : ''}>
             <Banner />
             <Services />
             <Timeline />
             <div className="container tech-stack">
-                <h2 className="section-title" style={{ color: color.code }}>Tech we master</h2>
-                <p className="tech-subtitle">We've got the goods. We offer a numanced understanding of today's tech and digital landscape</p>
-                <Link to="/technologies/">Read more</Link>
+                <ScrollAnimation animateIn="fadeIn">
+                    <h2 className="section-title" style={{ color: color.code }}>Tech we master</h2>
+                    <p className="tech-subtitle">We've got the goods. We offer a numanced understanding of today's tech and digital landscape</p>
+                    <Link to="/technologies/">Read more</Link>
+                </ScrollAnimation>
             </div>
             <DeviceBlock />
             <OurMission />
             <Footer />
-        </>
+        </div>
     )
 }
 
